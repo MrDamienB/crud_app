@@ -8,25 +8,25 @@ with open(csv_file_path, "r") as csv_file:
     reader = csv.DictReader(csv_file)
     for row in reader:
         products.append(row)
-        print(row["id"], row["name"])
-print(len(products))
+#        print(row["id"], row["name"])
 
 print("-----------------------------------","\n","PRODUCTS APPLICATION", '\n'"-----------------------------------")
 print("Welcome mrdamienb")
 
-#menu = """
-#    There are print(len(products)) products
-#
-#    Please choose an operation:
-#    'List'    | Display a list of product identifiers
-#    'Show'    | Show information about a product
-#    'Create'  | Add a new product
-#    'Update'  | Edit an existing product
-#    'Destroy' | Delete an existing product
-#
-#    Operation:"""
-#chosen_operation = input(menu)
-#
+menu = """
+    There are {0} products
+
+    Please choose an operation:
+    'List'    | Display a list of product identifiers
+    'Show'    | Show information about a product
+    'Create'  | Add a new product
+    'Update'  | Edit an existing product
+    'Destroy' | Delete an existing product
+
+    Operation:""".format(len(products))
+
+chosen_operation = input(menu)
+
 #def list_products():
 #    print("Product list")
 #def show_product():
