@@ -25,7 +25,20 @@ menu = """
 
     Operation:""".format(len(products))
 
-chosen_operation = input(menu)
+#new_products = "data/new_products.csv"
+#with open(new_products, "w", newline='') as csv_file:
+#    writer = csv.DictWriter(csv_file, fieldnames=["id", "name", "aisle", "department", "price"])
+#    writer.writeheader()
+#    for item in products:
+#        writer.writerow(item)
+
+with open(csv_file_path, "w", newline='') as csv_file:
+    writer = csv.DictWriter(csv_file, fieldnames=["id", "name", "aisle", "department", "price"])
+    writer.writeheader()
+    for item in products:
+        writer.writerow(item)
+
+#chosen_operation = input(menu)
 
 #def list_products():
 #    print("Product list")
